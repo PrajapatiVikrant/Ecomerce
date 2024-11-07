@@ -20,7 +20,7 @@ function Index() {
      getdata();
   },[])
   async function getdata(){
-    const data = await axios.get('https://expert-carnival-ww9776xrgqpfg6wj-3000.app.github.dev/api/product/category');
+    const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/category');
     console.log(data.data)
     setmenWatchName(data.data.MenWatch.name)
     setmenWatchList(data.data.MenWatch.watch)
@@ -32,17 +32,17 @@ function Index() {
   }
 
   async function menclick(){
-    const data = await axios('https://expert-carnival-ww9776xrgqpfg6wj-3000.app.github.dev/api/product/Men');
+    const data = await axios('https://ecomerce-backend-mauve.vercel.app/api/product/Men');
     console.log(data)
     dispatch(ChangeProductlist(data.data[0]))
   }
   async function womenclick(){
-    const data = await axios('https://expert-carnival-ww9776xrgqpfg6wj-3000.app.github.dev/api/product/Women');
+    const data = await axios('https://ecomerce-backend-mauve.vercel.app/api/product/Women');
     console.log(data)
     dispatch(ChangeProductlist(data.data[0]))
   }
   async function kidsclick(){
-    const data = await axios('https://expert-carnival-ww9776xrgqpfg6wj-3000.app.github.dev/api/product/Kids');
+    const data = await axios('https://ecomerce-backend-mauve.vercel.app/api/product/Kids');
     console.log(data)
     dispatch(ChangeProductlist(data.data[0]))
   }

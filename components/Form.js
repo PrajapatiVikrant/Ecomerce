@@ -13,7 +13,7 @@ const Form = ({type})=>{
      const router = useRouter();
      const dispatch = useDispatch(); 
   async function signup() {
-    const data = await axios.post('https://expert-carnival-ww9776xrgqpfg6wj-3000.app.github.dev/api/auth/signup',{name,email,password});
+    const data = await axios.post('https://ecomerce-backend-mauve.vercel.app/api/auth/signup',{name,email,password});
    
     if(data.data.token){
         localStorage.setItem('token',data.data.token)
@@ -23,7 +23,7 @@ const Form = ({type})=>{
    
   }
   async function login() {
-    const data = await axios.post('https://expert-carnival-ww9776xrgqpfg6wj-3000.app.github.dev/api/auth/login',{email,password});
+    const data = await axios.post('https://ecomerce-backend-mauve.vercel.app/api/auth/login',{email,password});
    
     if(data.data.token){
         localStorage.setItem('token',data.data.token)

@@ -22,7 +22,7 @@ const Kids = ()=>{
         getFilterList()
     })
     async function getFilterList(){
-        const data = await axios.get('https://expert-carnival-ww9776xrgqpfg6wj-3000.app.github.dev/api/product/Kids');
+        const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Kids');
         console.log(data.data)
         setfilterlist(data.data[0].watchCategory)
 

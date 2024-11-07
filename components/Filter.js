@@ -8,7 +8,7 @@ const Filter = ({list,category})=>{
    const dispatch = useDispatch();
   async function handleClick(type,index){
         if(document.getElementById(`${category}-${index}`).checked){
-             const data = await axios.get(`https://expert-carnival-ww9776xrgqpfg6wj-3000.app.github.dev/api/product/${category}/${type}`);
+             const data = await axios.get(`https://ecomerce-backend-mauve.vercel.app/api/product/${category}/${type}`);
              dispatch(ChangeProductlist(data.data))
              list.map((elem,i)=>{
                  if(i != index){
@@ -19,7 +19,7 @@ const Filter = ({list,category})=>{
             
            
         }else{
-         const data = await axios(`https://expert-carnival-ww9776xrgqpfg6wj-3000.app.github.dev/api/product/${category}`);
+         const data = await axios(`https://ecomerce-backend-mauve.vercel.app/api/product/${category}`);
          
          dispatch(ChangeProductlist(data.data[0]))
         }

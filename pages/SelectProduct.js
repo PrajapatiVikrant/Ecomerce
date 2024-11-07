@@ -13,7 +13,7 @@ const SelectProduct = () => {
 
 
     async function addToCart() {
-        const add = await axios.post('https://expert-carnival-ww9776xrgqpfg6wj-3000.app.github.dev/api/cart', { category: data.category, url: data.url, name: data.name, price: data.discountPrice }, {
+        const add = await axios.post('https://ecomerce-backend-mauve.vercel.app/api/cart', { category: data.category, url: data.url, name: data.name, price: data.discountPrice }, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             }
