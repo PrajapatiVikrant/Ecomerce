@@ -4,7 +4,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
  const ProductDisplaySlice = createSlice({
   name: 'ProductDisplaySlice',
-  initialState:[],
+  initialState:{
+    category:'',
+    watchCategory:[]
+  },
   reducers: {
     ChangeProductlist: (state,action) => {
       console.log(action.payload);
