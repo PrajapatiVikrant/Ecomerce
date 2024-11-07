@@ -28,9 +28,9 @@ function Index() {
     setwomenWatchList(data.data.WomenWatch.watch)
     setkidsWatchName(data.data.KidsWatch.name)
     setkidsWatchList(data.data.KidsWatch.watch)
-    fasddssd
+   
   }
-xcvzxcvczxasdfdf
+
   async function menclick(){
     const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Men');
     console.log(data)
