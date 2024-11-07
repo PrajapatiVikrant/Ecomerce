@@ -32,17 +32,17 @@ function Index() {
   }
 
   async function menclick(){
-    const data = await axios('https://ecomerce-backend-mauve.vercel.app/api/product/Men');
+    const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Men');
     console.log(data)
     dispatch(ChangeProductlist(data.data[0]))
   }
   async function womenclick(){
-    const data = await axios('https://ecomerce-backend-mauve.vercel.app/api/product/Women');
+    const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Women');
     console.log(data)
     dispatch(ChangeProductlist(data.data[0]))
   }
   async function kidsclick(){
-    const data = await axios('https://ecomerce-backend-mauve.vercel.app/api/product/Kids');
+    const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Kids');
     console.log(data)
     dispatch(ChangeProductlist(data.data[0]))
   }

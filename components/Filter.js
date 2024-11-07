@@ -19,7 +19,7 @@ const Filter = ({list,category})=>{
             
            
         }else{
-         const data = await axios(`https://ecomerce-backend-mauve.vercel.app/api/product/${category}`);
+         const data = await axios.get(`https://ecomerce-backend-mauve.vercel.app/api/product/${category}`);
          
          dispatch(ChangeProductlist(data.data[0]))
         }
