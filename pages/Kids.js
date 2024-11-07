@@ -20,7 +20,7 @@ const Kids = ()=>{
     useEffect(()=>{
         console.log(productData)
         getFilterList()
-    })
+    },[])
     async function getFilterList(){
         const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Kids');
         console.log(data.data)
