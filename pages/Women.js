@@ -38,10 +38,10 @@ const Women = ()=>{
                  <Filter list = {filterlist} category = {productData.category}/>
                 </section>
                 <section className="pl-14 grid grid-cols-1 md:grid-cols-3 gap-24">
-                   {/* {productData.watchCategory.map((elem)=>{
+                   {productData.watchCategory.map((elem)=>{
                  
                     return <WatchCategory categoryList = {elem.items}/>
-                   })} */}
+                   })}
                   
                    
                   
