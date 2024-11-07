@@ -6,10 +6,10 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { ChangeName } from "../state/Slice/NameSlice";
 
-const Form = ({type})=>{
+const Form = ({type,demoEmail,demoPassword})=>{
      const [name,setname] = useState('')
-     const [email,setemail] =useState('')
-     const [password,setpassword] = useState('')
+     const [email,setemail] =useState(demoEmail)
+     const [password,setpassword] = useState(demoPassword)
      const router = useRouter();
      const dispatch = useDispatch(); 
   async function signup() {
