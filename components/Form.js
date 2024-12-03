@@ -31,6 +31,7 @@ const Form = ({type,demoEmail,demoPassword})=>{
         dispatch(ChangeName(data.data.name))
         router.push('/');
     }
+    alert(data.data.message);
   }
    return (
       <>
