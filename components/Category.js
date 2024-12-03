@@ -7,7 +7,7 @@ const Category = ({name,list}) => {
     return (
         <div className="text-white">
             <h2 className="text-4xl m-7 text-center font-bold">{name}</h2>
-            <ul className="md:flex overflow-auto justify-center items-center">
+            <ul className="md:flex overflow-auto border-4 justify-center items-center">
                 {list.map((elem)=>{
                     return (
                         <li className="m-5 cursor-pointer">
