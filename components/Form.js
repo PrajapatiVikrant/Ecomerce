@@ -17,9 +17,10 @@ const Form = ({type,demoEmail,demoPassword})=>{
    
     if(data.data.token){
         localStorage.setItem('token',data.data.token)
-        dispatch(ChangeName(data.data.name))
+        dispatch(ChangeName(data.data.message))
         router.push('/');
     }
+    alert(data.data.message);
    
   }
   async function login() {
