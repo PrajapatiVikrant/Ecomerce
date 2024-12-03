@@ -9,7 +9,7 @@ function Home() {
    <div className=' bg-black'>
    <Navbar/>
    <div className='flex  justify-around items-center'>
-   <div className="   text-white my-3 ">
+   <div className="p-4   text-white my-3 ">
         
     <h1 className='font-bold text-center text-2xl md:text-6xl'>THE WATCH EVERYONE <br /> DESIRE</h1>
     <p className='md:text-xl text-green-400'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit <br /> amet consectetur, adipisicing elit. Tempore, rem?</p>
