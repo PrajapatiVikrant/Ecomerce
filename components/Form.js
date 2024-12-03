@@ -52,7 +52,7 @@ const Form = ({type,demoEmail,demoPassword})=>{
             <h1 className="text-white  text-2xl  text-left underline">{type}</h1>
             <input className="my-5 text-white bg-black text-xl p-2 border" type="email" value={email} onChange={(e)=>setemail(e.target.value)} placeholder="Enter your email" />
             <input className="my-5 text-white bg-black text-xl p-2 border" type="password" value={password} onChange={(e)=>setpassword(e.target.value)} placeholder="Enter your password" />
-           <button className="my-5 bg-red-400 text-white p-2 rounded-md" onClick={login}>Login</button>
+           <button className="my-5 bg-red-400 hover:bg-red-200 text-white p-2 rounded-md" onClick={login}>Login</button>
            <p className="text-white">If you have no account <Link href='/Signup' className="underline">Signup</Link> </p>
            </div>
         )}
