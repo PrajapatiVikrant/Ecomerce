@@ -32,7 +32,7 @@ const Form = ({type,demoEmail,demoPassword})=>{
         dispatch(ChangeName(data.data.message))
         router.push('/');
     }
-    alert(data.data.message);
+    alert(`login as ${data.data.message}`)
   }
    return (
       <>
