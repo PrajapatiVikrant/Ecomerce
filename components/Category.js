@@ -10,7 +10,7 @@ const Category = ({name,list}) => {
             <ul className="md:flex overflow-auto  justify-center items-center">
                 {list.map((elem)=>{
                     return (
-                        <li className="m-5 border-4 cursor-pointer">
+                        <li className="m-5  cursor-pointer">
                             <center>
                         <img 
                         style={{height:"200px",width:"350px"}}
