@@ -53,11 +53,11 @@ function explore(){
         {/* Button Group */}
         <div className="flex justify-between mt-4 space-x-2">
           {/* Add to Cart Button */}
-          <button className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300" onClick={addToCart}>
+          <button className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-300 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300" onClick={addToCart}>
             Add to Cart
           </button>
           {/* Explore Button */}
-          <Link href='/SelectProduct'><button className="flex-1 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-300" onClick={explore}>
+          <Link href='/SelectProduct'><button className="flex-1 px-4 py-2 bg-gray-600 hover:bg-gray-300 text-white rounded-lg hover:bg-gray-700 transition-colors duration-300" onClick={explore}>
             Explore
           </button></Link>
         </div>
