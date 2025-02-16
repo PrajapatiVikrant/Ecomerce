@@ -4,11 +4,14 @@ import react, { useEffect } from "react";
 import { CiShoppingCart } from "react-icons/ci";
 import Link from "next/link";
 import axios from "axios";
+
 import { useDispatch, useSelector } from "react-redux";
 import { ChangeProductlist } from "../state/Slice/ProductsDisplaySlice";
 import { getCartNo } from "../state/Slice/CartCountSlice";
 import { ChangeName } from "../state/Slice/NameSlice";
 import { changeCartlist } from "../state/Slice/CartSlice";
+import { useRouter } from "next/navigation";
+
 
 const Navbar = ()=>{
   
@@ -19,6 +22,7 @@ const Navbar = ()=>{
     return state.name;
   })
   const dispatch = useDispatch();
+  const router = useRouter();
 
 
   useEffect(()=>{
@@ -47,7 +51,7 @@ async function getcartItem(){
     dispatch(getCartNo(data.data.length));
     dispatch(changeCartlist(data.data))
   }else{
-    alert('You are not login')
+    router.push('/Login')
   }
  
 }
@@ -80,8 +84,8 @@ async function getcartItem(){
           
         </ul>
        <ul className="flex justify-around  w-1/6 md:text-3xl">
-        <Link href="/Login" className="cursor-pointer flex flex-col"><VscAccount/><div className="text-xs">{name}</div></Link>
-        <Link href="/Cart" className="flex items-center"><CiShoppingCart/><div className="text-xs relative md:right-9 bottom-3 bg-red-500 text-white md:p-1 md:px-2 rounded-full">{counter}</div></Link>
+        <Link href="/Login" className="cursor-pointer flex flex-col mx-2 justify-center items-center"><VscAccount/><div className="text-xs">{name}</div></Link>
+        <Link href="/Cart" className="flex items-center"><CiShoppingCart/><div className="text-[5px] md:text-xs relative right-3.5 md:right-9 bottom-3 bg-red-500 text-white p-1 px-2 rounded-full">{counter}</div></Link>
        </ul>
         </nav>
     )

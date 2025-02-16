@@ -21,7 +21,7 @@ function Index() {
   },[])
   async function getdata(){
     const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/category');
-    console.log(data.data)
+   
     setmenWatchName(data.data.MenWatch.name)
     setmenWatchList(data.data.MenWatch.watch)
     setwomenWatchName(data.data.WomenWatch.name)
@@ -33,17 +33,17 @@ function Index() {
 
   async function menclick(){
     const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Men');
-    console.log(data)
+    
     dispatch(ChangeProductlist(data.data[0]))
   }
   async function womenclick(){
     const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Women');
-    console.log(data)
+   
     dispatch(ChangeProductlist(data.data[0]))
   }
   async function kidsclick(){
     const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Kids');
-    console.log(data)
+   
     dispatch(ChangeProductlist(data.data[0]))
   }
 
