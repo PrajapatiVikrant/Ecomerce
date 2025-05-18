@@ -38,7 +38,7 @@ const Cart = ()=>{
 
     const openrazorpay = (data)=>{
         const options = {
-         key_id:'rzp_test_j9y9J7mpIATZVk',
+         key_id:'rzp_test_9Xl0nm4yttKDhb',
          amount:Number(data.amount),
          currency:data.currency,
          name:'ecomerce9580',
