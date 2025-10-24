@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { FaBlackTie } from "react-icons/fa";
-import Navbar from "../components/Navbar";
+import { getCartItem } from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CartCard from "../components/CartCard";
 import Razorpay from "razorpay"
 import axios from "axios";
@@ -12,8 +12,10 @@ const Cart = ()=>{
         return state.cartlist
     })
     const [total,settotal] = useState(0)
+    const dispatch = useDispatch();
     useEffect(()=>{
         getTotal()
+        getCartItem(dispatch)
         const loadRazorpayScript = () => {
             return new Promise((resolve) => {
               const script = document.createElement('script');

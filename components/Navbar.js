@@ -11,49 +11,49 @@ import { ChangeName } from "../state/Slice/NameSlice";
 import { changeCartlist } from "../state/Slice/CartSlice";
 import { useRouter } from "next/navigation";
 
+
+export async function getCartItem(dispatch, setIsLoggedIn) {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    setIsLoggedIn(false);
+    return;
+  }
+
+  try {
+    const data = await axios.get("https://ecomerce-backend-two.vercel.app/api/cart", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    const isLogin = await axios.get("https://ecomerce-backend-two.vercel.app/api/auth", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    if (isLogin.data.name) {
+      dispatch(ChangeName(isLogin.data.name));
+      setIsLoggedIn(true);
+    }
+
+    if (data.data !== "Invalid Token") {
+      dispatch(getCartNo(data.data.length));
+      dispatch(changeCartlist(data.data));
+    }
+  } catch (err) {
+    console.log("Error fetching user/cart:", err);
+    setIsLoggedIn(false);
+  }
+}
+
+// ✅ Navbar component
 const Navbar = () => {
   const counter = useSelector((state) => state.counter);
   const name = useSelector((state) => state.name);
   const dispatch = useDispatch();
   const router = useRouter();
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    getCartItem();
+    getCartItem(dispatch, setIsLoggedIn);
   }, []);
-
-  async function getCartItem() {
-    const token = localStorage.getItem("token");
-    console.log(token)
-    if (!token) {
-      setIsLoggedIn(false);
-      return;
-    }
-
-    try {
-      const data = await axios.get("https://ecomerce-backend-two.vercel.app/api/cart", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-
-      const isLogin = await axios.get("https://ecomerce-backend-two.vercel.app/api/auth", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-
-      if (isLogin.data.name) {
-        dispatch(ChangeName(isLogin.data.name));
-        setIsLoggedIn(true);
-      }
-
-      if (data.data !== "Invalid Token") {
-        dispatch(getCartNo(data.data.length));
-        dispatch(changeCartlist(data.data));
-      }
-    } catch (err) {
-      console.log("Error fetching user/cart:", err);
-      setIsLoggedIn(false);
-    }
-  }
 
   async function menclick() {
     const data = await axios.get("https://ecomerce-backend-two.vercel.app/api/product/Men");
