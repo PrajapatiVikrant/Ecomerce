@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import Filter from "../components/Filter";
 import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
+
 
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";

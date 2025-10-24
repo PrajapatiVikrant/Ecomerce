@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 import axios from "axios";
 

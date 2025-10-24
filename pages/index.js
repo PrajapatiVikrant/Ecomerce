@@ -6,7 +6,7 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import Link from 'next/link'
 import { ChangeProductlist } from '../state/Slice/ProductsDisplaySlice'
-import Navbar from '../components/Navbar'
+
 
 function Index() {
  const [menWatchName, setmenWatchName] = useState('');

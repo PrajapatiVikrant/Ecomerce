@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import Navbar from '../Navbar'
+
 
 
 
@@ -7,7 +7,7 @@ function Home() {
 
   return (
    <div className=' bg-black'>
-   <Navbar/>
+  
    <div className='flex  justify-around items-center'>
    <div className="p-4   text-white  mx-2 md:my-3 ">
         
