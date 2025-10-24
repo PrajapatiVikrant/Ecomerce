@@ -13,7 +13,7 @@ const Form = ({type,demoEmail,demoPassword})=>{
      const router = useRouter();
      const dispatch = useDispatch(); 
   async function signup() {
-    const data = await axios.post('https://ecomerce-backend-two.vercel.app//api/auth/signup',{name,email,password});
+    const data = await axios.post('https://ecomerce-backend-two.vercel.app/api/auth/signup',{name,email,password});
    
     if(data.data.token){
         localStorage.setItem('token',data.data.token)
@@ -25,7 +25,7 @@ const Form = ({type,demoEmail,demoPassword})=>{
    
   }
   async function login() {
-    const data = await axios.post('https://ecomerce-backend-two.vercel.app//api/auth/login',{email,password});
+    const data = await axios.post('https://ecomerce-backend-two.vercel.app/api/auth/login',{email,password});
    
     if(data.data.token){
         localStorage.setItem('token',data.data.token)

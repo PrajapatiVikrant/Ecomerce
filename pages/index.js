@@ -20,7 +20,7 @@ function Index() {
      getdata();
   },[])
   async function getdata(){
-    const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/product/category');
+    const data = await axios.get('https://ecomerce-backend-two.vercel.app/api/product/category');
    
     setmenWatchName(data.data.MenWatch.name)
     setmenWatchList(data.data.MenWatch.watch)
@@ -32,17 +32,17 @@ function Index() {
   }
 
   async function menclick(){
-    const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/product/Men');
+    const data = await axios.get('https://ecomerce-backend-two.vercel.app/api/product/Men');
     
     dispatch(ChangeProductlist(data.data[0]))
   }
   async function womenclick(){
-    const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/product/Women');
+    const data = await axios.get('https://ecomerce-backend-two.vercel.app/api/product/Women');
    
     dispatch(ChangeProductlist(data.data[0]))
   }
   async function kidsclick(){
-    const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/product/Kids');
+    const data = await axios.get('https://ecomerce-backend-two.vercel.app/api/product/Kids');
    
     dispatch(ChangeProductlist(data.data[0]))
   }
