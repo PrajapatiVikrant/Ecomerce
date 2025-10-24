@@ -10,7 +10,7 @@ const ProductCard = ({ productImg, productName, price, discountPrice,category })
   const dispatch = useDispatch();
   
 async function addToCart(){
-  const data = await axios.post('https://ecomerce-backend-mauve.vercel.app/api/cart',{category:category,url:productImg,name:productName,price:discountPrice},{
+  const data = await axios.post('https://ecomerce-backend-two.vercel.app//api/cart',{category:category,url:productImg,name:productName,price:discountPrice},{
     headers:{
       Authorization: `Bearer ${localStorage.getItem('token')}`, 
     }

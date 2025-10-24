@@ -9,13 +9,13 @@ const CartCard = ({productData})=>{
     const dispatch = useDispatch();
 
 async function deleteItem(){
-    const deleteRes = await axios.delete(`https://ecomerce-backend-mauve.vercel.app/api/cart/${productData._id}`,{
+    const deleteRes = await axios.delete(`https://ecomerce-backend-two.vercel.app//api/cart/${productData._id}`,{
         headers:{
           Authorization: `Bearer ${localStorage.getItem('token')}`, 
         }
       } )
       if(deleteRes.data == 'deleted'){
-      const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/cart',{
+      const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/cart',{
         headers:{
           Authorization: `Bearer ${localStorage.getItem('token')}`, 
         }
@@ -30,13 +30,13 @@ async function deleteItem(){
 
 
 async function editItem(){
-    const editRes = await axios.put(`https://ecomerce-backend-mauve.vercel.app/api/cart/${productData._id}`,{qty:editvalue},{
+    const editRes = await axios.put(`https://ecomerce-backend-two.vercel.app//api/cart/${productData._id}`,{qty:editvalue},{
         headers:{
           Authorization: `Bearer ${localStorage.getItem('token')}`, 
         }
       } )
       if(editRes.data == 'updated'){
-      const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/cart',{
+      const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/cart',{
         headers:{
           Authorization: `Bearer ${localStorage.getItem('token')}`, 
         }

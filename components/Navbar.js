@@ -30,13 +30,13 @@ const Navbar = ()=>{
  },[])
 
 async function getcartItem(){
-  const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/cart',{
+  const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/cart',{
     headers:{
       Authorization: `Bearer ${localStorage.getItem('token')}`, 
     }
   } )
   console.log(data.data)
-  const isLogin = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/auth',{
+  const isLogin = await axios.get('https://ecomerce-backend-two.vercel.app//api/auth',{
     headers:{
       Authorization: `Bearer ${localStorage.getItem('token')}`, 
     }
@@ -59,17 +59,17 @@ async function getcartItem(){
 
 
   async function menclick(){
-    const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Men');
+    const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/product/Men');
    
     dispatch(ChangeProductlist(data.data[0]))
   }
   async function womenclick(){
-    const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Women');
+    const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/product/Women');
  
     dispatch(ChangeProductlist(data.data[0]))
   }
   async function kidsclick(){
-    const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Kids');
+    const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/product/Kids');
     console.log(data)
     dispatch(ChangeProductlist(data.data[0]))
   }

@@ -22,7 +22,7 @@ const Women = ()=>{
         getFilterList()
     },[])
     async function getFilterList(){
-        const data = await axios.get('https://ecomerce-backend-mauve.vercel.app/api/product/Women');
+        const data = await axios.get('https://ecomerce-backend-two.vercel.app//api/product/Women');
         console.log(data.data)
         setfilterlist(data.data[0].watchCategory)
 
