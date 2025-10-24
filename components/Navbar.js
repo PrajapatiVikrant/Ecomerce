@@ -25,6 +25,7 @@ const Navbar = () => {
 
   async function getCartItem() {
     const token = localStorage.getItem("token");
+    console.log(token)
     if (!token) {
       setIsLoggedIn(false);
       return;

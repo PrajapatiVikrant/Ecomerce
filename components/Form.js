@@ -16,6 +16,7 @@ const Form = ({type,demoEmail,demoPassword})=>{
     const data = await axios.post('https://ecomerce-backend-two.vercel.app/api/auth/signup',{name,email,password});
    
     if(data.data.token){
+      console.log(data.data)
         localStorage.setItem('token',data.data.token)
         dispatch(ChangeName(data.data.message))
         router.push('/');

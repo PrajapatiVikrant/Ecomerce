@@ -7,7 +7,7 @@ const Signup = () => {
 
     return (
         <div className="bg-black">
-            <Navbar/>
+           
            <Form  type='Sign up' demoEmail='' demoPassword = '' />
             <Footer/>
         </div>

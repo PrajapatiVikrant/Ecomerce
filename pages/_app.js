@@ -1,12 +1,20 @@
-import { Provider } from 'react-redux'
-import '../global.css'
-import { store } from '../state/store'
+// pages/_app.js
+import "@/styles/globals.css";
+import Navbar from "@/components/Navbar";  // adjust the path if needed
+import { Provider } from "react-redux";
+import store from "@/state/store";
 
-
-export default function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
-    <Component {...pageProps} />
+      <div className="min-h-screen bg-black text-white">
+        <Navbar />
+        <main className="pt-16">
+          <Component {...pageProps} />
+        </main>
+      </div>
     </Provider>
-  )
+  );
 }
+
+export default MyApp;

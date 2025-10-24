@@ -31,7 +31,7 @@ const Women = ()=>{
     return (
         <div className="bg-black">
            
-            <Navbar/>
+          
             <h1 className="text-white m-14 text-4xl text-center">{productData.category} Category</h1>
             <div className="md:flex">
                 <section>

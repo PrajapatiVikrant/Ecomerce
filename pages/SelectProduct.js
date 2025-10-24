@@ -29,7 +29,7 @@ const SelectProduct = () => {
 
     return (
         <div className="bg-black">
-            <Navbar />
+           
             <h1 className="text-white m-14 text-4xl text-center">{data.category} Category</h1>
             <center>
             <div className="cursor-pointer border border-gray-200 rounded-lg p-4 shadow-md hover:scale-105 transform transition-transform duration-300 w-60">

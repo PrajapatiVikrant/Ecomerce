@@ -87,7 +87,7 @@ async function orderNow(){
 
     return (
        <div className="bg-black">
-        <Navbar/>
+        {/* <Navbar/> */}
         <div>
             <section>
                 <center>

@@ -7,7 +7,7 @@ const Login = () => {
 
     return (
         <div className="bg-black">
-            <Navbar/>
+            
            <Form  type='Login' demoEmail='v@gmail.com' demoPassword = 'vicky' />
             <Footer/>
         </div>
