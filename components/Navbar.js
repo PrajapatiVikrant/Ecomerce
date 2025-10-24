@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 
 export async function getCartItem(dispatch, setIsLoggedIn) {
 
-
+   const token = localStorage.getItem("token");
   try {
     const data = await axios.get("https://ecomerce-backend-two.vercel.app/api/cart", {
       headers: { Authorization: `Bearer ${token}` },
